@@ -1,0 +1,24 @@
+@startuml
+' Classe principal representando a entidade Empresa
+class Company {
+  +Integer id
+  +String nome
+  +String endereco
+  +String telefone
+  +String regiao
+  +String horario
+  +Decimal avaliacao
+  +String especialidade
+  +Timestamp created_at
+  +Timestamp updated_at
+}
+
+' Use case simples: Usuário adiciona empresa
+actor "Usuário" as User
+
+User --> (Adicionar Empresa)
+User --> (Editar Empresa)
+User --> (Excluir Empresa)
+User --> (Pesquisar Empresas)
+
+@enduml
